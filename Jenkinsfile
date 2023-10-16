@@ -1,5 +1,4 @@
-@Library('shared-lib')
-def gv
+
 
 
 pipeline {
