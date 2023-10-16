@@ -1,4 +1,5 @@
-
+@Library('shared-lib')
+def gv
 
 
 pipeline {
@@ -21,8 +22,12 @@ pipeline {
                 DEBUG_FLAGS = '-g'
             }
             steps {
-                sh 'printenv'
+                echo "Example of building $BRANCH_NAME"
             }
         }
+        stage('Build'){
+            buildJar
+        }
     }
+    
 }
