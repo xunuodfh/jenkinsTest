@@ -26,7 +26,10 @@ pipeline {
             }
         }
         stage('Build'){
-            buildJar()
+            steps{
+                buildJar()
+            }
+            
         }
     }
     
